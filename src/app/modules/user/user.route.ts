@@ -3,9 +3,8 @@ import { userController } from "./user.controller";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("Hellop Prisma");
-});
+router.get("/", userController.getAllUser);
+router.get("/:id", userController.getSingleUser);
 router.post("/create-user", userController.insertIntoDB);
 router.post("/profile", userController.insertOrUpdateProfile);
 
