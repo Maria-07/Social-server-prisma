@@ -7,5 +7,6 @@ router.get("/", (req, res) => {
   res.send("Hellop Prisma");
 });
 router.post("/create-user", userController.insertIntoDB);
+router.post("/profile", userController.insertOrUpdateProfile);
 
 export const UserRoutes = router;
